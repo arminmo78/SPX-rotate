@@ -10,25 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Install dependencies
-        run: pip install requests
-
+      - run: pip install requests
       - name: Fetch market data
         env:
           AV_API_KEY: ${{ secrets.AV_API_KEY }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python fetch_data.py
-
       - name: Commit and push data.json
         run: |
           git config user.name "github-actions[bot]"
@@ -36,3 +28,10 @@ jobs:
           git add data.json
           git diff --staged --quiet || git commit -m "Update market data $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
+
+  keep-alive:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    steps:
+      - name: Keep workflow active
+        run: echo "Keep-alive ping $(date -u)"
