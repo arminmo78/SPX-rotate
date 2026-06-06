@@ -1,10 +1,12 @@
 {
-  "fetchedAt": "2026-06-06 22:27 AEST",
-  "fetchedDate": "2026-06-06",
-  "errors": [],
-  "spxDrop": 2.9,
-  "spxCurrent": 737.55,
-  "spxATH": 759.57,
+  "fetchedAt": "2026-06-07 09:53 AEST",
+  "fetchedDate": "2026-06-07",
+  "errors": [
+    "AV SPY: rate limit hit"
+  ],
+  "spxDrop": null,
+  "spxCurrent": null,
+  "spxATH": null,
   "vix": 15.4,
   "creditSpread": 274,
   "inflation": 3.95,
@@ -16,10 +18,8 @@
   "geopolitical": 3,
   "audusd": 1,
   "audusdRate": 0.7069,
-  "spyATH": 759.57,
-  "fetchedCount": 7,
+  "fetchedCount": 6,
   "fetchedIndicators": [
-    "spxDrop",
     "vix",
     "creditSpread",
     "inflation",
