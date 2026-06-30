@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-06-30 08:08 AEST",
+  "fetchedAt": "2026-06-30 18:30 AEST",
   "fetchedDate": "2026-06-30",
   "errors": [],
-  "spxDrop": 1.84,
-  "spxCurrent": 740.94,
+  "spxDrop": 1.83,
+  "spxCurrent": 741.0,
   "spxATH": 754.83,
   "vix": 18.41,
   "creditSpread": 283,
@@ -15,7 +15,7 @@
   "earnings": 1,
   "geopolitical": 3,
   "audusd": 1,
-  "audusdRate": 0.6897,
+  "audusdRate": 0.6888,
   "spyATH": 754.83,
   "fetchedCount": 7,
   "fetchedIndicators": [
